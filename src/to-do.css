@@ -1,6 +1,21 @@
 *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: paleturquoise;
+    margin-top: 50px;
+}
+.input-field{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+::placeholder{
+    font-family: Verdana, Geneva, Tahoma, sans-serify;
 }
