@@ -1,4 +1,4 @@
-let task = [
+let tasks = [
     {
         id: 1,
         taskName: 'Work',

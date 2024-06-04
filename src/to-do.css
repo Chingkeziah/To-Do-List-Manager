@@ -54,3 +54,12 @@ body{
     border: none;
     background-color: rgb(232, 107, 149);
 }
+.horizontal-line{
+    margin-top: 10px;
+}
+.task-list{
+    display: flex;
+}
+.make-changes{
+    margin-left: 60px;
+}
