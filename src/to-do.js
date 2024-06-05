@@ -37,6 +37,8 @@ let tasks = [
 ]
 
 function add(){
-    addEventListener
+    addEventListener=onclick={
+        // addContent.text to list
+    }
 }
 
