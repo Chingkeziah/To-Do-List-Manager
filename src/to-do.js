@@ -36,9 +36,23 @@ let tasks = [
     }
 ]
 
+// a function to add a new todo
 function add(){
     addEventListener=onclick={
         // addContent.text to list
     }
 }
 
+// a function to delete a to-do 
+
+
+
+
+
+// a function to edit a review
+
+
+
+
+
+// a function that tranfers a completed review to another section
