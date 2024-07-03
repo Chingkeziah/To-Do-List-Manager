@@ -1,3 +1,16 @@
+/* header */
+.search{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+.search-input{
+    padding: 10px 50px;
+    border-radius: 10px;
+
+}
+
 /* landing page */
 /* .btn{
     background-color: grey;
@@ -5,8 +18,9 @@
 } */
 .main{
     display: grid;
-    gap: 10px;
-    grid-template-rows: repeat(2fr, 200);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 25px;
     padding: 10px 50px;
 }
 .btn{
@@ -14,5 +28,6 @@
     background-color: gainsboro;
     border-radius: 10px;
     text-align: center;
-    
+    height: 100px;
+    width: 400px;
 }
