@@ -21,7 +21,7 @@ body{
 }
 /* styling for the card */
 .container{
-    height: 350px;
+    min-height: 350px;
     width: 900px;
     margin-top: 40px;
     display: flex;
@@ -65,7 +65,11 @@ body{
     margin-left: 60px;
 }
 
-
+.task-list {
+    display: flex;
+    flex-direction: column; /* This ensures the tasks are displayed in a column */
+    gap: 10px;
+}
 
 
 
