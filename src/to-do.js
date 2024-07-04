@@ -3,56 +3,98 @@ let tasks = [
         id: 1,
         taskName: 'Work',
         description: "Complete project report",
-        dueDate: Date('10-06-24'),
+        dueDate: new Date('2024-06-10'),
         priority: 'important',
     },
     {
-        id:2,
+        id: 2,
         taskName: 'School',
         description: "Complete final year thesis",
-        dueDate: Date('15-07-24'),
+        dueDate: new Date('2024-07-15'),
         priority: 'very important',
     },
     {
-        id:3,
+        id: 3,
         taskName: 'Errands',
         description: "Buy groceries from the store",
-        dueDate: Date('05-06-24'),
+        dueDate: new Date('2024-06-05'),
         priority: 'important',
     },
     {
-        id:4,
+        id: 4,
         taskName: 'Health and fitness',
         description: "Go to the hospital for checkup",
-        dueDate: Date('08-06-24'),
+        dueDate: new Date('2024-06-08'),
         priority: 'very important',
     },
     {
-        id:5,
+        id: 5,
         taskName: 'Personal Development',
         description: "Read 10 pages of a self-development book",
-        dueDate: Date('04-06-24'),
+        dueDate: new Date('2024-06-04'),
         priority: 'important',
     }
-]
+];
 
-// a function to add a new todo
-function add(){
-    addEventListener=onclick={
-        // addContent.text to list
+function add() {
+    const taskName = document.querySelector('.add-new').value;
+    const description = "No description"; // Default description
+    const dueDate = new Date().toLocaleDateString(); // Default due date
+    const priority = 'important'; // Default priority
+
+    if (taskName) {
+        const newTask = {
+            id: tasks.length + 1,
+            taskName,
+            description,
+            dueDate,
+            priority
+        };
+
+        tasks.push(newTask);
+        displayTasks();
+        clearInput();
+    } else {
+        alert('Please enter a task name');
     }
 }
 
-// a function to delete a to-do 
+function displayTasks() {
+    const taskList = document.querySelector('.task-list');
+    taskList.innerHTML = ''; // Clear current tasks
 
+    tasks.forEach(task => {
+        const taskDiv = document.createElement('div');
+        taskDiv.classList.add('task-description');
 
+        taskDiv.innerHTML = `
+            <input type="radio" id="task-${task.id}">
+            <label for="task-${task.id}">${task.taskName}</label>
+            <p>${task.description}</p>
+            <p>Reminder - ${task.dueDate}</p>
+            <div class="make-changes">
+                <button onclick="editTask(${task.id})">Edit</button>
+                <button onclick="deleteTask(${task.id})">Delete</button>
+            </div>
+        `;
 
+        taskList.appendChild(taskDiv);
+    });
+}
 
+function clearInput() {
+    document.querySelector('.add-new').value = '';
+}
 
-// a function to edit a review
+function editTask(taskId) {
+    // Placeholder function to handle editing tasks
+    console.log(`Edit task with ID: ${taskId}`);
+}
 
+function deleteTask(taskId) {
+    tasks = tasks.filter(task => task.id !== taskId);
+    displayTasks();
+}
 
-
-
-
-// a function that tranfers a completed review to another section
+// Initial display of tasks
+displayTasks();
