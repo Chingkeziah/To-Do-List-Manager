@@ -21,7 +21,7 @@ body{
 }
 /* styling for the card */
 .container{
-    min-height: 350px;
+    /* min-height: 350px; */
     width: 900px;
     margin-top: 40px;
     display: flex;
