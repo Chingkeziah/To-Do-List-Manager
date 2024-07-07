@@ -65,7 +65,6 @@ body{
 .make-changes{
     margin-left: 60px;
 }
-
 .task-list {
     display: flex;
     flex-direction: column; /* This ensures the tasks are displayed in a column */
