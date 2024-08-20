@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+
 
 function Todo() {
   return (
     <>
-        <h1 items-start>TO-DO-LIST MANAGER</h1>
+        <h1>TO-DO-LIST MANAGER</h1>
       
     </>
   )
