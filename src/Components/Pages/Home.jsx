@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
-
+import { NavLink, Link } from 'react-router-dom';
 function Home() {
   return (
     <>
@@ -38,7 +38,9 @@ function Home() {
               <div></div>
           </button>
       </section>
-
+        <li>
+            <NavLink to="/to-do">To-do Page</NavLink>
+        </li>
       <Footer />
       </>
   )
