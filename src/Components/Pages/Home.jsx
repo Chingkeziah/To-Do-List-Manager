@@ -39,7 +39,7 @@ function Home() {
           </button>
       </section>
         <li>
-            <NavLink to="/to-do">To-do Page</NavLink>
+            <NavLink to="/Todo">To-do Page</NavLink>
         </li>
       <Footer />
       </>
